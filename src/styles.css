@@ -159,24 +159,21 @@ h1 {
 
 .hero-media {
   z-index: 1;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  opacity: 0.92;
   filter: saturate(1.06) contrast(1.06);
 }
 
 .quote-rotator {
   position: absolute;
   z-index: 4;
-  right: clamp(14px, 4vw, 42px);
-  bottom: clamp(14px, 6vw, 56px);
-  width: min(460px, calc(100% - 28px));
-  min-height: 138px;
-  padding: clamp(18px, 3vw, 28px);
-  border: 1px solid rgba(248, 247, 239, 0.18);
-  background: rgba(10, 10, 10, 0.66);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+  top: 50%;
+  left: 50%;
+  width: min(780px, calc(100% - 36px));
+  min-height: clamp(132px, 18vw, 190px);
   overflow: hidden;
+  transform: translate(-50%, -50%);
 }
 
 .quote-rotator p {
@@ -184,11 +181,14 @@ h1 {
   inset: clamp(18px, 3vw, 28px);
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0;
   color: rgba(248, 247, 239, 0.9);
-  font-size: clamp(1rem, 1.6vw, 1.45rem);
+  font-size: clamp(1.35rem, 3.4vw, 3.7rem);
   font-weight: 800;
-  line-height: 1.45;
+  line-height: 1.08;
+  text-align: center;
+  text-shadow: 0 8px 34px rgba(0, 0, 0, 0.72), 0 0 2px rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(16px);
@@ -369,6 +369,22 @@ h1 {
   border-bottom-color: #ffed00;
 }
 
+.interest-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.interest-list li::before {
+  display: none;
+}
+
+.interest-list span {
+  width: 1.35em;
+  flex: 0 0 1.35em;
+  text-align: center;
+}
+
 .focus-section {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
@@ -480,8 +496,9 @@ h1 {
   }
 
   .quote-rotator {
-    right: 14px;
-    bottom: 14px;
+    top: 50%;
+    left: 50%;
+    width: min(720px, calc(100% - 28px));
   }
 
   .game-stats {
@@ -508,11 +525,6 @@ h1 {
     transform: scale(1.04);
   }
 
-  .hero-media {
-    object-fit: cover;
-    object-position: center;
-  }
-
   .hero-visual::before {
     background:
       linear-gradient(180deg, rgba(8, 8, 8, 0.62), rgba(8, 8, 8, 0.08) 36%, rgba(8, 8, 8, 0.66)),
@@ -533,17 +545,14 @@ h1 {
   }
 
   .quote-rotator {
-    right: 12px;
-    bottom: 18px;
-    width: calc(100% - 24px);
-    min-height: 112px;
-    padding: 16px;
+    width: calc(100% - 28px);
+    min-height: 142px;
   }
 
   .quote-rotator p {
     inset: 16px;
-    font-size: 0.95rem;
-    line-height: 1.38;
+    font-size: clamp(1.45rem, 10vw, 3.1rem);
+    line-height: 1;
   }
 
   .brand {

@@ -17,6 +17,13 @@ const affiliations = [
   { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/" },
 ];
 
+const interests = [
+  { icon: "\u{1F94A}", name: "Kampfsport" },
+  { icon: "\u{2708}\u{FE0F}", name: "Reisen" },
+  { icon: "\u{1F4BB}", name: "IT" },
+  { icon: "\u{270D}\u{FE0F}", name: "Schreiben" },
+];
+
 const quotes = [
   "Das Aufstiegsversprechen muss wieder gelten.",
   "Der Staat macht zu viel Schulden.",
@@ -93,6 +100,17 @@ function App() {
                 )}
               </div>
             ))}
+            <div className="stat-line stat-stack">
+              <span>INTERESTS</span>
+              <ul className="interest-list">
+                {interests.map((interest) => (
+                  <li key={interest.name}>
+                    <span aria-hidden="true">{interest.icon}</span>
+                    {interest.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="stat-line stat-stack">
               <span>AFFILIATIONS</span>
               <ul>
