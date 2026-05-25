@@ -430,16 +430,25 @@ h1 {
 }
 
 .topic-item-featured {
-  padding-left: 0;
+  position: relative;
   border-bottom-color: rgba(255, 237, 0, 0.28);
   background:
-    linear-gradient(90deg, rgba(255, 237, 0, 0.08), rgba(255, 237, 0, 0)),
+    linear-gradient(180deg, rgba(255, 237, 0, 0.08), rgba(255, 237, 0, 0.015)),
     rgba(8, 8, 8, 0.18);
-  box-shadow: inset 3px 0 0 rgba(255, 237, 0, 0.52);
 }
 
 .topic-item-featured summary {
   color: rgba(255, 237, 0, 0.92);
+}
+
+.topic-item-featured::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 237, 0, 0.72), rgba(255, 237, 0, 0));
+  content: "";
 }
 
 .topic-item summary {
