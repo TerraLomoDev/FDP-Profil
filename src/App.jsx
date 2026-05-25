@@ -34,7 +34,7 @@ const coreTopics = [
       "Mehr Raum fuer Gruendung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
   },
   {
-    title: "Feminismus",
+    title: "Liberaler Feminismus",
     text:
       "Selbstbestimmung, gleiche Chancen und echte Wahlfreiheit in Karriere, Familie und gesellschaftlicher Teilhabe.",
   },
