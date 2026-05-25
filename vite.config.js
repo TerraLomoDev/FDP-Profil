@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: resolve(projectRoot, "index.html"),
         impressum: resolve(projectRoot, "impressum.html"),
+        datenschutz: resolve(projectRoot, "datenschutz.html"),
       },
     },
   },

@@ -518,6 +518,13 @@ h1 {
   line-height: 1.75;
 }
 
+.legal-list {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: rgba(248, 247, 239, 0.68);
+  line-height: 1.7;
+}
+
 .legal-page a {
   color: #ffed00;
   border-bottom: 1px solid rgba(255, 237, 0, 0.34);
@@ -554,6 +561,18 @@ h1 {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 12px 20px;
+}
+
+.footer-links a {
+  border-bottom: 1px solid rgba(255, 237, 0, 0.18);
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.footer-links a:hover {
+  color: #ffed00;
+  border-bottom-color: #ffed00;
 }
 
 @media (max-width: 900px) {

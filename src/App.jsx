@@ -137,8 +137,8 @@ function App() {
 
       <section id="fokus" className="focus-section">
         <div className="section-heading">
-          <span className="section-label">Kernthemen</span>
-          <h2>Positionen mit klarer Kante.</h2>
+          <span className="section-label">Schwerpunkthemen</span>
+          <h2>Nicht links. Nicht rechts. Sondern nach vorn.</h2>
         </div>
         <div className="topic-list">
           {coreTopics.map((topic) => (
@@ -158,10 +158,11 @@ function App() {
       </section>
 
       <footer id="kontakt" className="footer">
-        <p>FDP Profil</p>
+        <p>Patrick van Rossum</p>
         <div className="footer-links">
           <a href="./impressum.html">Impressum</a>
-          <a href="mailto:Patrick_van_rossum@julis.de">Patrick_van_rossum@julis.de</a>
+          <a href="./datenschutz.html">Datenschutzerklärung</a>
+          <a href="mailto:Patrick_van_rossum@julis.de">Kontakt: Patrick_van_rossum@julis.de</a>
         </div>
       </footer>
     </main>
