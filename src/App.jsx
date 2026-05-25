@@ -28,10 +28,16 @@ const quotes = [
   "Das Aufstiegsversprechen muss wieder gelten.",
   "Der Staat macht zu viel Schulden.",
   "Bildung entscheidet, ob Freiheit praktisch wird.",
-  "Weniger Buerokratie. Mehr Vertrauen.",
+  "Weniger Bürokratie. Mehr Vertrauen.",
 ];
 
 const coreTopics = [
+  {
+    title: "Buchholz-Kleefeld (Bezirksratswahlen)",
+    text:
+      "Kommunalpolitik muss konkret sein: sichere Wege, lebendige Stadtteile, digitale Verwaltung vor Ort und ein Bezirksrat, der Probleme löst, statt sie zu vertagen.",
+    featured: true,
+  },
   {
     title: "Digitalisierung",
     paragraphs: [
@@ -40,19 +46,19 @@ const coreTopics = [
       "Wir können es uns nicht länger leisten, dass der Föderalismus die Digitalisierung lähmt und Fortschritt blockiert. Deutschland braucht statt endloser Selbstbeschäftigung endlich eine gemeinsame digitale Strategie und den Mut, bestehende Regeln grundlegend zu hinterfragen.",
     ],
     article: {
-      label: "Interview bei eGovernment: Zeit fuer eine Neuausrichtung",
+      label: "Interview bei eGovernment: Zeit für eine Neuausrichtung",
       url: "https://www.egovernment.de/zeit-fuer-eine-neuausrichtung-a-3a073c53f2835cbc995c92f1621c1fda/",
     },
   },
   {
     title: "Bildung",
     text:
-      "Beste Chancen fuer jede Biografie: gute Ausstattung, starke Lehrkraefte und Schulen, die Talente wirklich foerdern.",
+      "Beste Chancen für jede Biografie: gute Ausstattung, starke Lehrkräfte und Schulen, die Talente wirklich fördern.",
   },
   {
     title: "Wirtschaft",
     text:
-      "Mehr Raum fuer Gruendung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
+      "Mehr Raum für Gründung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
   },
   {
     title: "Liberaler Feminismus",
@@ -69,7 +75,7 @@ function App() {
           Patrick van Rossum
         </a>
         <div className="nav-links">
-          <a href="#steckbrief">Steckbrief</a>
+          <a href="#steckbrief">Profil</a>
           <a href="#fokus">Fokus</a>
           <a href="#kontakt">Kontakt</a>
         </div>
@@ -88,7 +94,7 @@ function App() {
       </section>
 
       <section id="steckbrief" className="profile-band">
-        <div className="section-label">Steckbrief</div>
+        <div className="section-label">Profil</div>
         <div className="profile-grid">
           <article className="profile-intro">
             <div className="profile-photo" aria-label="Profilbild Platzhalter">
@@ -96,7 +102,7 @@ function App() {
             </div>
           </article>
 
-          <aside className="game-stats" aria-label="Steckbrief Werte">
+          <aside className="game-stats" aria-label="Profil Werte">
             {profileStats.map((stat) => (
               <div className="stat-line" key={stat.label}>
                 <span>{stat.label}</span>
@@ -142,7 +148,7 @@ function App() {
         </div>
         <div className="topic-list">
           {coreTopics.map((topic) => (
-            <details className="topic-item" key={topic.title}>
+            <details className={topic.featured ? "topic-item topic-item-featured" : "topic-item"} key={topic.title}>
               <summary>{topic.title}</summary>
               {topic.paragraphs
                 ? topic.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
@@ -162,7 +168,7 @@ function App() {
         <div className="footer-links">
           <a href="./impressum.html">Impressum</a>
           <a href="./datenschutz.html">Datenschutzerklärung</a>
-          <a href="mailto:Patrick_van_rossum@julis.de">Kontakt: Patrick_van_rossum@julis.de</a>
+          <span>Kontakt: Patrick_van_rossum@julis.de</span>
         </div>
       </footer>
     </main>
