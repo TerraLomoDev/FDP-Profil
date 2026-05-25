@@ -7,14 +7,10 @@ const profileStats = [
 ];
 
 const quotes = [
-  {
-    label: "Zitat 01",
-    text: "Freiheit heisst, Menschen mehr zuzutrauen als dem Staat.",
-  },
-  {
-    label: "Zitat 02",
-    text: "Zukunft entsteht dort, wo Mut, Bildung und Verantwortung zusammenkommen.",
-  },
+  "Das Aufstiegsversprechen muss wieder gelten.",
+  "Der Staat macht zu viel Schulden.",
+  "Bildung entscheidet, ob Freiheit praktisch wird.",
+  "Weniger Buerokratie. Mehr Vertrauen.",
 ];
 
 const coreTopics = [
@@ -89,12 +85,11 @@ function App() {
 
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
           <img src={heroImage} alt="" />
-          {quotes.map((quote, index) => (
-            <figure className={`floating-card quote-card card-${index + 1}`} key={quote.label}>
-              <figcaption>{quote.label}</figcaption>
-              <blockquote>{quote.text}</blockquote>
-            </figure>
-          ))}
+          <div className="quote-rotator" aria-label="Politische Aussagen">
+            {quotes.map((quote) => (
+              <p key={quote}>{quote}</p>
+            ))}
+          </div>
         </div>
       </section>
 
