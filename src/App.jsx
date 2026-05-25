@@ -62,7 +62,8 @@ function App() {
 
       <section id="top" className="hero-section">
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
-          <img src={heroImage} alt="" />
+          <img className="hero-backdrop" src={heroImage} alt="" aria-hidden="true" />
+          <img className="hero-media" src={heroImage} alt="" />
           <div className="quote-rotator" aria-label="Politische Aussagen">
             {quotes.map((quote) => (
               <p key={quote}>{quote}</p>
