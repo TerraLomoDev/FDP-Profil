@@ -5,7 +5,7 @@ const profileStats = [
   { label: "NAME", value: "Patrick van Rossum" },
   { label: "AGE", value: "32" },
   { label: "FACTION", value: "FDP", logo: fdpLogo },
-  { label: "REGION", value: "Niedersachsen" },
+  { label: "REGION", value: "Hannover" },
   { label: "CLASS", value: "IT Business Analyst" },
   { label: "EDUCATION", value: "Fachinformatiker AE" },
 ];
