@@ -61,6 +61,11 @@ const coreTopics = [
       "Selbstbestimmung, gleiche Chancen und echte Wahlfreiheit in Karriere, Familie und gesellschaftlicher Teilhabe.",
   },
   {
+    title: "Migration und Flüchtlinge",
+    text:
+      "Humanität und Ordnung gehören zusammen: klare Verfahren, schnelle Integration in Arbeit und Bildung und ein Staat, der Schutz gibt, ohne Realität auszublenden.",
+  },
+  {
     title: "Wirtschaft",
     text:
       "Mehr Raum für Gründung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
