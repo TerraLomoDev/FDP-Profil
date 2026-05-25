@@ -90,6 +90,7 @@ a {
   width: min(100%, 1480px);
   min-height: min(940px, 100svh);
   align-items: center;
+  justify-items: center;
   margin-inline: auto;
   padding: 96px clamp(18px, 5vw, 64px) 58px;
 }
@@ -122,6 +123,7 @@ h1 {
 
 .hero-visual {
   position: relative;
+  width: min(100%, 1180px);
   min-height: clamp(520px, 76svh, 780px);
   isolation: isolate;
 }
