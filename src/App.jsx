@@ -36,10 +36,9 @@ const quotes = [
 const heroQuotes = [
   "Wer hart arbeitet, muss wieder aufsteigen können.",
   "Mehr Geld im Portemonnaie. Weniger beim Staat.",
-  "Deutschland braucht Migration.",
   "Bildung entscheidet, ob Freiheit praktisch wird.",
   "Weniger Bürokratie. Mehr Vertrauen.",
-  "Mehr Netto von Brutto.",
+  "Der Liberale Feminismus ist die Lösung.",
   "Die beste Sozialpolitik ist eine gute Wirtschaftspolitik.",
   "Steuerbetrug zahlt am Ende die Mitte.",
   "Deutschland braucht Macher statt Verwalter.",
