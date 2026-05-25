@@ -457,6 +457,23 @@ h1 {
   hyphens: auto;
 }
 
+.topic-link {
+  display: inline-flex;
+  max-width: 720px;
+  margin: 0 0 28px;
+  color: #ffed00;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.45;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid rgba(255, 237, 0, 0.36);
+}
+
+.topic-link:hover {
+  border-bottom-color: #ffed00;
+}
+
 .imprint-section,
 .legal-page {
   padding-top: 56px;
@@ -638,6 +655,11 @@ h1 {
     max-width: none;
     font-size: 0.98rem;
     line-height: 1.68;
+  }
+
+  .topic-link {
+    max-width: none;
+    font-size: 0.84rem;
   }
 
   .stat-line {

@@ -39,6 +39,10 @@ const coreTopics = [
       "Der digitale Staat ist die Grundvoraussetzung für ein modernes, handlungsfähiges Deutschland. Bürgerinnen und Bürger erwarten zu Recht eine Verwaltung, die einfach, schnell und digital funktioniert.",
       "Wir können es uns nicht länger leisten, dass der Föderalismus die Digitalisierung lähmt und Fortschritt blockiert. Deutschland braucht statt endloser Selbstbeschäftigung endlich eine gemeinsame digitale Strategie und den Mut, bestehende Regeln grundlegend zu hinterfragen.",
     ],
+    article: {
+      label: "Interview bei eGovernment: Zeit fuer eine Neuausrichtung",
+      url: "https://www.egovernment.de/zeit-fuer-eine-neuausrichtung-a-3a073c53f2835cbc995c92f1621c1fda/",
+    },
   },
   {
     title: "Bildung",
@@ -143,6 +147,11 @@ function App() {
               {topic.paragraphs
                 ? topic.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
                 : <p>{topic.text}</p>}
+              {topic.article ? (
+                <a className="topic-link" href={topic.article.url} target="_blank" rel="noreferrer">
+                  {topic.article.label}
+                </a>
+              ) : null}
             </details>
           ))}
         </div>
