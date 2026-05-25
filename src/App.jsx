@@ -6,26 +6,65 @@ const profileStats = [
   { value: "2026", label: "Launch" },
 ];
 
-const focusItems = [
-  "Digitalisierung",
-  "Bildung",
-  "Wirtschaft",
-  "Freiheit",
+const quotes = [
+  {
+    label: "Zitat 01",
+    text: "Freiheit heisst, Menschen mehr zuzutrauen als dem Staat.",
+  },
+  {
+    label: "Zitat 02",
+    text: "Zukunft entsteht dort, wo Mut, Bildung und Verantwortung zusammenkommen.",
+  },
+];
+
+const coreTopics = [
+  {
+    title: "Digitalisierung",
+    text:
+      "Digitale Verwaltung, moderne Infrastruktur und pragmatische Loesungen, die Buerokratie abbauen und Alltag einfacher machen.",
+  },
+  {
+    title: "Bildung",
+    text:
+      "Beste Chancen fuer jede Biografie: gute Ausstattung, starke Lehrkraefte und Schulen, die Talente wirklich foerdern.",
+  },
+  {
+    title: "Wirtschaft",
+    text:
+      "Mehr Raum fuer Gruendung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
+  },
+  {
+    title: "Feminismus",
+    text:
+      "Selbstbestimmung, gleiche Chancen und echte Wahlfreiheit in Karriere, Familie und gesellschaftlicher Teilhabe.",
+  },
 ];
 
 const timeline = [
-  { year: "01", title: "Profil", text: "Klare Haltung, kurzer Steckbrief, starke visuelle Identitaet." },
-  { year: "02", title: "Positionen", text: "Themen spaeter modular erweiterbar mit Karten und Detailseiten." },
-  { year: "03", title: "Kontakt", text: "Direkte Wege fuer Austausch, Termine und Social Links." },
+  {
+    year: "01",
+    title: "Profil",
+    text: "Klare Haltung, kurzer Steckbrief, starke visuelle Identitaet.",
+  },
+  {
+    year: "02",
+    title: "Positionen",
+    text: "Themen spaeter modular erweiterbar mit Karten und Detailseiten.",
+  },
+  {
+    year: "03",
+    title: "Kontakt",
+    text: "Direkte Wege fuer Austausch, Termine und Social Links.",
+  },
 ];
 
 function App() {
   return (
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
-        <a className="brand" href="#top" aria-label="FDP Profil Start">
-          <span>FDP</span>
-          Profil
+        <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
+          <span>PVR</span>
+          Patrick van Rossum
         </a>
         <div className="nav-links">
           <a href="#steckbrief">Steckbrief</a>
@@ -50,14 +89,12 @@ function App() {
 
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
           <img src={heroImage} alt="" />
-          <div className="floating-card card-one">
-            <span>Status</span>
-            <strong>bereit fuer Ausbau</strong>
-          </div>
-          <div className="floating-card card-two">
-            <span>Vibe</span>
-            <strong>dark / modern / liberal</strong>
-          </div>
+          {quotes.map((quote, index) => (
+            <figure className={`floating-card quote-card card-${index + 1}`} key={quote.label}>
+              <figcaption>{quote.label}</figcaption>
+              <blockquote>{quote.text}</blockquote>
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -86,15 +123,18 @@ function App() {
 
       <section id="fokus" className="focus-section">
         <div className="section-heading">
-          <span className="section-label">Fokus</span>
-          <h2>Themen mit klarer Kante.</h2>
+          <span className="section-label">Kernthemen</span>
+          <h2>Positionen mit klarer Kante.</h2>
         </div>
-        <div className="focus-list">
-          {focusItems.map((item) => (
-            <div className="focus-pill" key={item}>
-              <span aria-hidden="true"></span>
-              {item}
-            </div>
+        <div className="topic-list">
+          {coreTopics.map((topic) => (
+            <details className="topic-item" key={topic.title}>
+              <summary>
+                <span aria-hidden="true"></span>
+                {topic.title}
+              </summary>
+              <p>{topic.text}</p>
+            </details>
           ))}
         </div>
       </section>

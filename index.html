@@ -9,9 +9,9 @@
   <body>
     <main class="site-shell">
       <nav class="topbar" aria-label="Hauptnavigation">
-        <a class="brand" href="#top" aria-label="FDP Profil Start">
-          <span>FDP</span>
-          Profil
+        <a class="brand" href="#top" aria-label="Patrick van Rossum Start">
+          <span>PVR</span>
+          Patrick van Rossum
         </a>
         <div class="nav-links">
           <a href="#steckbrief">Steckbrief</a>
@@ -36,14 +36,14 @@
 
         <div class="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
           <img src="./src/assets/fdp-profile-hero.png" alt="" />
-          <div class="floating-card card-one">
-            <span>Status</span>
-            <strong>bereit fuer Ausbau</strong>
-          </div>
-          <div class="floating-card card-two">
-            <span>Vibe</span>
-            <strong>dark / modern / liberal</strong>
-          </div>
+          <figure class="floating-card quote-card card-1">
+            <figcaption>Zitat 01</figcaption>
+            <blockquote>Freiheit heisst, Menschen mehr zuzutrauen als dem Staat.</blockquote>
+          </figure>
+          <figure class="floating-card quote-card card-2">
+            <figcaption>Zitat 02</figcaption>
+            <blockquote>Zukunft entsteht dort, wo Mut, Bildung und Verantwortung zusammenkommen.</blockquote>
+          </figure>
         </div>
       </section>
 
@@ -78,14 +78,38 @@
 
       <section id="fokus" class="focus-section">
         <div class="section-heading">
-          <span class="section-label">Fokus</span>
-          <h2>Themen mit klarer Kante.</h2>
+          <span class="section-label">Kernthemen</span>
+          <h2>Positionen mit klarer Kante.</h2>
         </div>
-        <div class="focus-list">
-          <div class="focus-pill"><span aria-hidden="true"></span>Digitalisierung</div>
-          <div class="focus-pill"><span aria-hidden="true"></span>Bildung</div>
-          <div class="focus-pill"><span aria-hidden="true"></span>Wirtschaft</div>
-          <div class="focus-pill"><span aria-hidden="true"></span>Freiheit</div>
+        <div class="topic-list">
+          <details class="topic-item">
+            <summary><span aria-hidden="true"></span>Digitalisierung</summary>
+            <p>
+              Digitale Verwaltung, moderne Infrastruktur und pragmatische Loesungen,
+              die Buerokratie abbauen und Alltag einfacher machen.
+            </p>
+          </details>
+          <details class="topic-item">
+            <summary><span aria-hidden="true"></span>Bildung</summary>
+            <p>
+              Beste Chancen fuer jede Biografie: gute Ausstattung, starke Lehrkraefte
+              und Schulen, die Talente wirklich foerdern.
+            </p>
+          </details>
+          <details class="topic-item">
+            <summary><span aria-hidden="true"></span>Wirtschaft</summary>
+            <p>
+              Mehr Raum fuer Gruendung, Mittelstand und Innovation, damit Leistung sich
+              lohnt und Wachstum vor Ort entsteht.
+            </p>
+          </details>
+          <details class="topic-item">
+            <summary><span aria-hidden="true"></span>Feminismus</summary>
+            <p>
+              Selbstbestimmung, gleiche Chancen und echte Wahlfreiheit in Karriere,
+              Familie und gesellschaftlicher Teilhabe.
+            </p>
+          </details>
         </div>
       </section>
 
