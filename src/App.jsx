@@ -1,9 +1,19 @@
 import heroImage from "./assets/fdp-profile-hero.png";
 
 const profileStats = [
-  { value: "FDP", label: "Profil" },
-  { value: "NRW", label: "Standort" },
-  { value: "2026", label: "Launch" },
+  { label: "NAME", value: "Patrick van Rossum" },
+  { label: "LEVEL", value: "32" },
+  { label: "CLASS", value: "IT Business Analyst" },
+  { label: "FACTION", value: "FDP", badge: true },
+  { label: "REGION", value: "Niedersachsen" },
+  { label: "EDUCATION", value: "Fachinformatiker AE" },
+];
+
+const affiliations = [
+  "Junge Liberale",
+  "Liberale Vielfalt",
+  "Chaos Computer Club",
+  "Box Club Hannover Kleefeld e. V.",
 ];
 
 const quotes = [
@@ -91,14 +101,26 @@ function App() {
             </p>
           </article>
 
-          <div className="stats-row" aria-label="Profil Kennzahlen">
+          <aside className="game-stats" aria-label="Steckbrief Werte">
             {profileStats.map((stat) => (
-              <div className="stat" key={stat.label}>
-                <strong>{stat.value}</strong>
+              <div className="stat-line" key={stat.label}>
                 <span>{stat.label}</span>
+                {stat.badge ? (
+                  <strong className="party-badge">{stat.value}</strong>
+                ) : (
+                  <strong>{stat.value}</strong>
+                )}
               </div>
             ))}
-          </div>
+            <div className="stat-line stat-stack">
+              <span>AFFILIATIONS</span>
+              <ul>
+                {affiliations.map((affiliation) => (
+                  <li key={affiliation}>{affiliation}</li>
+                ))}
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
 
