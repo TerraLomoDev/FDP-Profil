@@ -75,12 +75,16 @@ function App() {
         <div className="section-label">Steckbrief</div>
         <div className="profile-grid">
           <article className="profile-intro">
-            <h2>Patrick van Rossum</h2>
-            <p>
-              Platzhalter fuer eine kurze politische Selbstbeschreibung mit Fokus auf
-              Haltung, Region und Themen. Die Seite ist bewusst so angelegt, dass Inhalte
-              spaeter schnell ersetzt oder erweitert werden koennen.
-            </p>
+            <div className="profile-photo" aria-label="Profilbild Platzhalter">
+              <span>Profilbild</span>
+            </div>
+            <div className="profile-copy">
+              <h2>Patrick van Rossum</h2>
+              <p>
+                Platzhalter fuer deinen persoenlichen Text. Hier kann spaeter kurz stehen,
+                wer du bist, wofuer du politisch stehst und was Menschen ueber dich wissen sollen.
+              </p>
+            </div>
           </article>
 
           <aside className="game-stats" aria-label="Steckbrief Werte">

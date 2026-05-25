@@ -79,11 +79,11 @@ a {
 .hero-section {
   display: grid;
   width: min(100%, 1480px);
-  min-height: min(940px, 100svh);
+  min-height: min(860px, 92svh);
   align-items: center;
   justify-items: center;
   margin-inline: auto;
-  padding: 96px clamp(18px, 5vw, 64px) 58px;
+  padding: 74px clamp(18px, 5vw, 64px) 36px;
 }
 
 .eyebrow,
@@ -115,7 +115,7 @@ h1 {
 .hero-visual {
   position: relative;
   width: min(100%, 1180px);
-  min-height: clamp(520px, 76svh, 780px);
+  min-height: clamp(500px, 72svh, 720px);
   isolation: isolate;
 }
 
@@ -131,7 +131,7 @@ h1 {
 .hero-visual img {
   width: 100%;
   height: 100%;
-  min-height: clamp(520px, 76svh, 780px);
+  min-height: clamp(500px, 72svh, 720px);
   object-fit: cover;
   object-position: center;
   filter: saturate(1.06) contrast(1.06);
@@ -229,6 +229,30 @@ h1 {
   margin-bottom: 18px;
   font-size: clamp(2.35rem, 5vw, 5.4rem);
   line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 46px);
+  align-items: center;
+}
+
+.profile-photo {
+  display: grid;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  place-items: center;
+  border: 1px solid rgba(255, 237, 0, 0.28);
+  background:
+    linear-gradient(135deg, rgba(255, 237, 0, 0.12), transparent 38%),
+    linear-gradient(315deg, rgba(229, 0, 126, 0.14), transparent 36%),
+    rgba(255, 255, 255, 0.035);
+  color: rgba(248, 247, 239, 0.5);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -450,6 +474,10 @@ h1 {
   .game-stats {
     max-width: 760px;
   }
+
+  .profile-intro {
+    grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 560px) {
@@ -483,5 +511,13 @@ h1 {
     grid-template-columns: 1fr;
     gap: 4px;
     padding-block: 10px;
+  }
+
+  .profile-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    max-width: 190px;
   }
 }
