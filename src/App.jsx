@@ -1,5 +1,7 @@
 import heroImage from "./assets/fdp-profile-hero.png";
 import fdpLogo from "./assets/fdp logo.jpg";
+import instagramLogo from "./assets/instagram.png";
+import youtubeLogo from "./assets/youtube.png";
 
 const profileStats = [
   { label: "NAME", value: "Patrick van Rossum" },
@@ -76,9 +78,25 @@ function App() {
   return (
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
-        <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
-          Patrick van Rossum
-        </a>
+        <div className="brand-cluster">
+          <div className="social-links" aria-label="Social Media">
+            <a
+              className="social-link"
+              href="https://www.instagram.com/patrick_vanrossum/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <img src={instagramLogo} alt="" />
+            </a>
+            <span className="social-link social-link-static" aria-label="YouTube">
+              <img src={youtubeLogo} alt="" />
+            </span>
+          </div>
+          <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
+            Patrick van Rossum
+          </a>
+        </div>
         <div className="nav-links">
           <a href="#steckbrief">Profil</a>
           <a href="#fokus">Fokus</a>
