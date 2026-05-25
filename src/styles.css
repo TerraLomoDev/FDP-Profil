@@ -62,15 +62,6 @@ a {
   text-transform: uppercase;
 }
 
-.brand span {
-  display: grid;
-  min-width: 46px;
-  height: 30px;
-  place-items: center;
-  color: #080808;
-  background: #ffed00;
-}
-
 .nav-links {
   flex: 0 0 auto;
   display: flex;
@@ -461,10 +452,6 @@ h1 {
 
   .brand {
     font-size: 0.74rem;
-  }
-
-  .brand span {
-    min-width: 40px;
   }
 
   .topic-item summary {

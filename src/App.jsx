@@ -59,7 +59,6 @@ function App() {
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
         <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
-          <span>PVR</span>
           Patrick van Rossum
         </a>
         <div className="nav-links">
