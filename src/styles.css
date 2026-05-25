@@ -237,19 +237,21 @@ h1 {
 }
 
 .profile-band {
-  padding-top: clamp(44px, 6vw, 72px);
-  padding-bottom: clamp(56px, 7vw, 82px);
+  padding-top: clamp(56px, 7vw, 92px);
+  padding-bottom: clamp(64px, 8vw, 96px);
   border-top: 1px solid rgba(248, 247, 239, 0.12);
   border-bottom: 1px solid rgba(248, 247, 239, 0.12);
-  background: rgba(255, 255, 255, 0.025);
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.08), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.025);
 }
 
 .profile-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
-  gap: clamp(28px, 6vw, 90px);
-  align-items: end;
-  margin-top: 18px;
+  grid-template-columns: minmax(360px, 0.95fr) minmax(420px, 1.05fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  margin-top: 26px;
 }
 
 .profile-intro h2,
@@ -262,9 +264,12 @@ h1 {
 
 .profile-intro {
   display: grid;
-  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
-  gap: clamp(22px, 4vw, 46px);
-  align-items: center;
+  gap: 20px;
+  align-content: start;
+  width: min(100%, 430px);
+  padding: 18px;
+  border: 1px solid rgba(248, 247, 239, 0.12);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .profile-photo {
@@ -284,10 +289,15 @@ h1 {
   text-transform: uppercase;
 }
 
+.profile-copy {
+  padding-top: 4px;
+}
+
 .game-stats {
   display: grid;
   gap: 0;
-  padding: 18px;
+  align-self: stretch;
+  padding: clamp(18px, 2.4vw, 28px);
   border: 1px solid rgba(255, 237, 0, 0.3);
   background:
     linear-gradient(90deg, rgba(255, 237, 0, 0.08), transparent 36%),
@@ -300,10 +310,10 @@ h1 {
 
 .stat-line {
   display: grid;
-  grid-template-columns: minmax(116px, 0.44fr) minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: minmax(132px, 0.38fr) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 34px);
   align-items: center;
-  min-height: 46px;
+  min-height: 52px;
   border-bottom: 1px solid rgba(248, 247, 239, 0.12);
 }
 
@@ -347,14 +357,22 @@ h1 {
 }
 
 .stat-stack li::before {
-  margin-right: 8px;
-  color: #ffed00;
-  content: ">";
+  display: none;
 }
 
 .stat-stack a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
   color: inherit;
   border-bottom: 1px solid rgba(255, 237, 0, 0.28);
+}
+
+.stat-stack a span {
+  width: 1.35em;
+  flex: 0 0 1.35em;
+  text-align: center;
 }
 
 .stat-stack a:hover {
@@ -483,6 +501,10 @@ h1 {
 
   .profile-intro {
     grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
   }
 }
 

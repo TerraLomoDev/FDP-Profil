@@ -10,10 +10,10 @@ const profileStats = [
 ];
 
 const affiliations = [
-  { name: "Junge Liberale", url: "https://www.julis.de/" },
-  { name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/" },
-  { name: "Chaos Computer Club", url: "https://www.ccc.de/" },
-  { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/" },
+  { icon: "⚡", name: "Junge Liberale", url: "https://www.julis.de/" },
+  { icon: "🌈", name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/" },
+  { icon: "⌨️", name: "Chaos Computer Club", url: "https://www.ccc.de/" },
+  { icon: "🥊", name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/" },
 ];
 
 const quotes = [
@@ -101,6 +101,7 @@ function App() {
                 {affiliations.map((affiliation) => (
                   <li key={affiliation.name}>
                     <a href={affiliation.url} target="_blank" rel="noreferrer">
+                      <span aria-hidden="true">{affiliation.icon}</span>
                       {affiliation.name}
                     </a>
                   </li>
