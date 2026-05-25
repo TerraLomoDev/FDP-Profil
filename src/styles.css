@@ -303,19 +303,12 @@ h1 {
   line-height: 1.35;
 }
 
-.party-badge {
-  display: inline-grid;
-  width: fit-content;
-  min-width: 74px;
-  min-height: 34px;
-  place-items: center;
-  padding: 4px 12px;
-  color: #131313;
-  background: linear-gradient(90deg, #ffed00 0 68%, #e5007e 68% 100%);
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 950;
-  letter-spacing: 0.03em;
+.party-logo {
+  display: block;
+  width: min(92px, 100%);
+  max-height: 36px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .stat-stack {

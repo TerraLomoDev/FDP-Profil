@@ -1,9 +1,9 @@
 import heroImage from "./assets/fdp-profile-hero.png";
+import fdpLogo from "./assets/fdp logo.jpg";
 
 const profileStats = [
-  { label: "NAME", value: "Patrick van Rossum" },
   { label: "AGE", value: "32" },
-  { label: "FACTION", value: "FDP", badge: true },
+  { label: "FACTION", value: "FDP", logo: fdpLogo },
   { label: "REGION", value: "Niedersachsen" },
   { label: "CLASS", value: "IT Business Analyst" },
   { label: "EDUCATION", value: "Fachinformatiker AE" },
@@ -91,8 +91,8 @@ function App() {
             {profileStats.map((stat) => (
               <div className="stat-line" key={stat.label}>
                 <span>{stat.label}</span>
-                {stat.badge ? (
-                  <strong className="party-badge">{stat.value}</strong>
+                {stat.logo ? (
+                  <img className="party-logo" src={stat.logo} alt={stat.value} />
                 ) : (
                   <strong>{stat.value}</strong>
                 )}
