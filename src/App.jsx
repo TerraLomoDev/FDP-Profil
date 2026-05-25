@@ -14,7 +14,7 @@ const affiliations = [
   { name: "Junge Liberale", url: "https://www.julis.de/" },
   { name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/" },
   { name: "Chaos Computer Club", url: "https://www.ccc.de/" },
-  { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/" },
+  { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/", suffix: "(Mitglied)" },
 ];
 
 const interests = [
@@ -122,6 +122,7 @@ function App() {
                     <a href={affiliation.url} target="_blank" rel="noreferrer">
                       {affiliation.name}
                     </a>
+                    {affiliation.suffix ? ` ${affiliation.suffix}` : ""}
                   </li>
                 ))}
               </ul>
@@ -147,14 +148,12 @@ function App() {
         </div>
       </section>
 
-      <section className="imprint-section" aria-label="Impressum">
-        <span className="section-label">Impressum</span>
-        <p>Angaben gemaess TMG folgen.</p>
-      </section>
-
       <footer id="kontakt" className="footer">
         <p>FDP Profil</p>
-        <a href="mailto:kontakt@example.com">kontakt@example.com</a>
+        <div className="footer-links">
+          <a href="./impressum.html">Impressum</a>
+          <a href="mailto:Patrick_van_rossum@julis.de">Patrick_van_rossum@julis.de</a>
+        </div>
       </footer>
     </main>
   );
