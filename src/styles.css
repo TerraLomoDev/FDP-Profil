@@ -248,8 +248,8 @@ h1 {
 
 .profile-grid {
   display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(420px, 1.05fr);
-  gap: clamp(28px, 5vw, 72px);
+  grid-template-columns: minmax(260px, 0.58fr) minmax(460px, 1.42fr);
+  gap: clamp(28px, 5vw, 76px);
   align-items: center;
   margin-top: 26px;
 }
@@ -266,7 +266,8 @@ h1 {
   display: grid;
   gap: 20px;
   align-content: start;
-  width: min(100%, 430px);
+  justify-self: end;
+  width: min(100%, 340px);
   padding: 18px;
   border: 1px solid rgba(248, 247, 239, 0.12);
   background: rgba(255, 255, 255, 0.03);
@@ -287,10 +288,6 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.profile-copy {
-  padding-top: 4px;
 }
 
 .game-stats {
@@ -357,22 +354,9 @@ h1 {
 }
 
 .stat-stack li::before {
-  display: none;
-}
-
-.stat-stack a {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  width: fit-content;
-  color: inherit;
-  border-bottom: 1px solid rgba(255, 237, 0, 0.28);
-}
-
-.stat-stack a span {
-  width: 1.35em;
-  flex: 0 0 1.35em;
-  text-align: center;
+  margin-right: 8px;
+  color: #ffed00;
+  content: ">";
 }
 
 .stat-stack a:hover {
@@ -501,6 +485,7 @@ h1 {
 
   .profile-intro {
     grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
+    justify-self: auto;
     width: auto;
     padding: 0;
     border: 0;
