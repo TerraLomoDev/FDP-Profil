@@ -66,13 +66,6 @@ a {
   backdrop-filter: blur(12px);
 }
 
-.brand-cluster {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: clamp(12px, 2vw, 18px);
-}
-
 .social-links {
   display: flex;
   flex: 0 0 auto;
@@ -636,6 +629,18 @@ h1 {
   margin: 0;
 }
 
+.footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.footer-social-links .social-link {
+  width: 24px;
+  height: 24px;
+}
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -744,10 +749,6 @@ h1 {
 
   .brand {
     font-size: 0.74rem;
-  }
-
-  .brand-cluster {
-    gap: 10px;
   }
 
   .social-links {

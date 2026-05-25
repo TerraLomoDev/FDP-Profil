@@ -78,25 +78,9 @@ function App() {
   return (
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
-        <div className="brand-cluster">
-          <div className="social-links" aria-label="Social Media">
-            <a
-              className="social-link"
-              href="https://www.instagram.com/patrick_vanrossum/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <img src={instagramLogo} alt="" />
-            </a>
-            <span className="social-link social-link-static" aria-label="YouTube">
-              <img src={youtubeLogo} alt="" />
-            </span>
-          </div>
-          <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
-            Patrick van Rossum
-          </a>
-        </div>
+        <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
+          Patrick van Rossum
+        </a>
         <div className="nav-links">
           <a href="#steckbrief">Profil</a>
           <a href="#fokus">Fokus</a>
@@ -189,7 +173,23 @@ function App() {
       </section>
 
       <footer id="kontakt" className="footer">
-        <p>Patrick van Rossum</p>
+        <div className="footer-brand">
+          <p>Patrick van Rossum</p>
+          <div className="social-links footer-social-links" aria-label="Social Media">
+            <a
+              className="social-link"
+              href="https://www.instagram.com/patrick_vanrossum/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <img src={instagramLogo} alt="" />
+            </a>
+            <span className="social-link social-link-static" aria-label="YouTube">
+              <img src={youtubeLogo} alt="" />
+            </span>
+          </div>
+        </div>
         <div className="footer-links">
           <a href="./impressum.html">Impressum</a>
           <a href="./datenschutz.html">Datenschutzerklärung</a>
