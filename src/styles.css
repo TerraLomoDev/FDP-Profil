@@ -314,6 +314,16 @@ h1 {
   content: ">";
 }
 
+.stat-stack a {
+  color: inherit;
+  border-bottom: 1px solid rgba(255, 237, 0, 0.28);
+}
+
+.stat-stack a:hover {
+  color: #ffed00;
+  border-bottom-color: #ffed00;
+}
+
 .focus-section {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);

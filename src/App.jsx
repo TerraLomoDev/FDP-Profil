@@ -2,18 +2,18 @@ import heroImage from "./assets/fdp-profile-hero.png";
 
 const profileStats = [
   { label: "NAME", value: "Patrick van Rossum" },
-  { label: "LEVEL", value: "32" },
-  { label: "CLASS", value: "IT Business Analyst" },
+  { label: "AGE", value: "32" },
   { label: "FACTION", value: "FDP", badge: true },
   { label: "REGION", value: "Niedersachsen" },
+  { label: "CLASS", value: "IT Business Analyst" },
   { label: "EDUCATION", value: "Fachinformatiker AE" },
 ];
 
 const affiliations = [
-  "Junge Liberale",
-  "Liberale Vielfalt",
-  "Chaos Computer Club",
-  "Box Club Hannover Kleefeld e. V.",
+  { name: "Junge Liberale", url: "https://www.julis.de/" },
+  { name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/" },
+  { name: "Chaos Computer Club", url: "https://www.ccc.de/" },
+  { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/" },
 ];
 
 const quotes = [
@@ -98,7 +98,11 @@ function App() {
               <span>AFFILIATIONS</span>
               <ul>
                 {affiliations.map((affiliation) => (
-                  <li key={affiliation}>{affiliation}</li>
+                  <li key={affiliation.name}>
+                    <a href={affiliation.url} target="_blank" rel="noreferrer">
+                      {affiliation.name}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>
