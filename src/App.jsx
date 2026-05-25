@@ -46,24 +46,6 @@ const coreTopics = [
   },
 ];
 
-const timeline = [
-  {
-    year: "01",
-    title: "Profil",
-    text: "Klare Haltung, kurzer Steckbrief, starke visuelle Identitaet.",
-  },
-  {
-    year: "02",
-    title: "Positionen",
-    text: "Themen spaeter modular erweiterbar mit Karten und Detailseiten.",
-  },
-  {
-    year: "03",
-    title: "Kontakt",
-    text: "Direkte Wege fuer Austausch, Termine und Social Links.",
-  },
-];
-
 function App() {
   return (
     <main className="site-shell">
@@ -132,24 +114,16 @@ function App() {
         <div className="topic-list">
           {coreTopics.map((topic) => (
             <details className="topic-item" key={topic.title}>
-              <summary>
-                <span aria-hidden="true"></span>
-                {topic.title}
-              </summary>
+              <summary>{topic.title}</summary>
               <p>{topic.text}</p>
             </details>
           ))}
         </div>
       </section>
 
-      <section className="timeline-section" aria-label="Roadmap">
-        {timeline.map((item) => (
-          <article className="timeline-card" key={item.title}>
-            <span>{item.year}</span>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
-        ))}
+      <section className="imprint-section" aria-label="Impressum">
+        <span className="section-label">Impressum</span>
+        <p>Angaben gemaess TMG folgen.</p>
       </section>
 
       <footer id="kontakt" className="footer">

@@ -201,7 +201,7 @@ h1 {
 
 .profile-band,
 .focus-section,
-.timeline-section,
+.imprint-section,
 .footer {
   width: min(100%, 1480px);
   margin-inline: auto;
@@ -338,7 +338,6 @@ h1 {
   cursor: pointer;
   list-style: none;
   align-items: center;
-  gap: 16px;
   color: rgba(248, 247, 239, 0.88);
   font-size: clamp(1.35rem, 2.8vw, 2.75rem);
   font-weight: 800;
@@ -361,51 +360,25 @@ h1 {
   content: "-";
 }
 
-.topic-item summary span {
-  width: 12px;
-  height: 12px;
-  flex: 0 0 12px;
-  background: #da277a;
-  box-shadow: 18px 0 0 #ffed00;
-}
-
 .topic-item p {
   max-width: 720px;
-  margin: -2px 0 24px 46px;
+  margin: -2px 0 24px;
   color: rgba(248, 247, 239, 0.68);
   font-size: 1.02rem;
   line-height: 1.75;
 }
 
-.timeline-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  padding-top: 46px;
-  padding-bottom: 80px;
+.imprint-section {
+  padding-top: 56px;
+  padding-bottom: 64px;
+  border-top: 1px solid rgba(248, 247, 239, 0.12);
 }
 
-.timeline-card {
-  min-height: 220px;
-  padding: 26px;
-  border: 1px solid rgba(248, 247, 239, 0.13);
-  background: rgba(255, 255, 255, 0.035);
-}
-
-.timeline-card span {
-  color: #ffed00;
-  font-weight: 900;
-}
-
-.timeline-card h3 {
-  margin: 46px 0 14px;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-
-.timeline-card p {
-  color: rgba(248, 247, 239, 0.66);
-  line-height: 1.65;
+.imprint-section p {
+  margin: 14px 0 0;
+  color: rgba(248, 247, 239, 0.62);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .footer {
@@ -438,7 +411,7 @@ h1 {
   .hero-section,
   .profile-grid,
   .focus-section,
-  .timeline-section {
+  .imprint-section {
     grid-template-columns: 1fr;
   }
 
@@ -490,7 +463,6 @@ h1 {
 
   .topic-item summary {
     min-height: 68px;
-    gap: 14px;
   }
 
   .topic-item p {
