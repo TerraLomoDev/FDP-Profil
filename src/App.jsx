@@ -56,14 +56,14 @@ const coreTopics = [
       "Beste Chancen für jede Biografie: gute Ausstattung, starke Lehrkräfte und Schulen, die Talente wirklich fördern.",
   },
   {
-    title: "Wirtschaft",
-    text:
-      "Mehr Raum für Gründung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
-  },
-  {
     title: "Liberaler Feminismus",
     text:
       "Selbstbestimmung, gleiche Chancen und echte Wahlfreiheit in Karriere, Familie und gesellschaftlicher Teilhabe.",
+  },
+  {
+    title: "Wirtschaft",
+    text:
+      "Mehr Raum für Gründung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
   },
 ];
 
