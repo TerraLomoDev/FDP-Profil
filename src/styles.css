@@ -248,7 +248,7 @@ h1 {
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(16px);
-  animation: quoteFade 16s infinite;
+  animation: quoteFade 36s infinite;
 }
 
 .quote-rotator p:nth-child(2) {
@@ -263,20 +263,40 @@ h1 {
   animation-delay: 12s;
 }
 
+.quote-rotator p:nth-child(5) {
+  animation-delay: 16s;
+}
+
+.quote-rotator p:nth-child(6) {
+  animation-delay: 20s;
+}
+
+.quote-rotator p:nth-child(7) {
+  animation-delay: 24s;
+}
+
+.quote-rotator p:nth-child(8) {
+  animation-delay: 28s;
+}
+
+.quote-rotator p:nth-child(9) {
+  animation-delay: 32s;
+}
+
 @keyframes quoteFade {
   0%,
-  12% {
+  3.5% {
     opacity: 0;
     transform: translateY(16px);
   }
 
-  18%,
-  32% {
+  6%,
+  8.5% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  40%,
+  11.11%,
   100% {
     opacity: 0;
     transform: translateY(-14px);

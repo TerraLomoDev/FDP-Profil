@@ -33,6 +33,18 @@ const quotes = [
   "Weniger Bürokratie. Mehr Vertrauen.",
 ];
 
+const heroQuotes = [
+  "Wer hart arbeitet, muss wieder aufsteigen können.",
+  "Mehr Geld im Portemonnaie. Weniger beim Staat.",
+  "Deutschland braucht Migration.",
+  "Bildung entscheidet, ob Freiheit praktisch wird.",
+  "Weniger Bürokratie. Mehr Vertrauen.",
+  "Mehr Netto von Brutto.",
+  "Die beste Sozialpolitik ist eine gute Wirtschaftspolitik.",
+  "Steuerbetrug zahlt am Ende die Mitte.",
+  "Deutschland braucht Macher statt Verwalter.",
+];
+
 const coreTopics = [
   {
     title: "Buchholz-Kleefeld (Bezirksratswahlen)",
@@ -93,7 +105,7 @@ function App() {
           <img className="hero-backdrop" src={heroImage} alt="" aria-hidden="true" />
           <img className="hero-media" src={heroImage} alt="" />
           <div className="quote-rotator" aria-label="Politische Aussagen">
-            {quotes.map((quote) => (
+            {heroQuotes.map((quote) => (
               <p key={quote}>{quote}</p>
             ))}
           </div>
