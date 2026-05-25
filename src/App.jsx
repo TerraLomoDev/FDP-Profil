@@ -81,10 +81,6 @@ function App() {
             </div>
             <div className="profile-copy">
               <h2>Patrick van Rossum</h2>
-              <p>
-                Platzhalter fuer deinen persoenlichen Text. Hier kann spaeter kurz stehen,
-                wer du bist, wofuer du politisch stehst und was Menschen ueber dich wissen sollen.
-              </p>
             </div>
           </article>
 
