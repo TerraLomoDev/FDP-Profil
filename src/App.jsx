@@ -34,8 +34,11 @@ const quotes = [
 const coreTopics = [
   {
     title: "Digitalisierung",
-    text:
-      "Digitale Verwaltung, moderne Infrastruktur und pragmatische Loesungen, die Buerokratie abbauen und Alltag einfacher machen.",
+    paragraphs: [
+      "Die Veränderungen, die uns insbesondere durch Künstliche Intelligenz in den nächsten fünf Jahren bevorstehen, werden größer sein als vieles, was wir in den vergangenen Jahrzehnten erlebt haben. Deshalb dürfen wir Digitalisierung nicht länger nur als technisches Thema begreifen. Digitalisierung ist Gesellschaftspolitik. Sie entscheidet darüber, wie wir lernen, arbeiten, wirtschaften und miteinander leben.",
+      "Der digitale Staat ist die Grundvoraussetzung für ein modernes, handlungsfähiges Deutschland. Bürgerinnen und Bürger erwarten zu Recht eine Verwaltung, die einfach, schnell und digital funktioniert.",
+      "Wir können es uns nicht länger leisten, dass der Föderalismus die Digitalisierung lähmt und Fortschritt blockiert. Deutschland braucht statt endloser Selbstbeschäftigung endlich eine gemeinsame digitale Strategie und den Mut, bestehende Regeln grundlegend zu hinterfragen.",
+    ],
   },
   {
     title: "Bildung",
@@ -136,7 +139,9 @@ function App() {
           {coreTopics.map((topic) => (
             <details className="topic-item" key={topic.title}>
               <summary>{topic.title}</summary>
-              <p>{topic.text}</p>
+              {topic.paragraphs
+                ? topic.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                : <p>{topic.text}</p>}
             </details>
           ))}
         </div>
