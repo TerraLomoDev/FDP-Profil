@@ -107,6 +107,11 @@ function App() {
             <div className="profile-photo" aria-label="Profilbild Platzhalter">
               <span>Profilbild</span>
             </div>
+            <p className="profile-bio">
+              Als überzeugter Ordoliberaler steht für mich die Freiheit des Individuums an erster Stelle. Staatliche
+              Eingriffe sind nur dann gerechtfertigt, wenn sie zu einem deutlich größeren Maß an Freiheit für die
+              Gesellschaft insgesamt führen.
+            </p>
           </article>
 
           <aside className="game-stats" aria-label="Profil Werte">
