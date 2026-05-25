@@ -70,19 +70,6 @@ function App() {
       </nav>
 
       <section id="top" className="hero-section">
-        <div className="hero-copy">
-          <p className="eyebrow">Patrick van Rossum</p>
-          <h1>Ein moderner Steckbrief fuer ein klares FDP Profil.</h1>
-          <p className="intro">
-            Dunkel, direkt und persoenlich: eine Startseite als digitale Visitenkarte,
-            gebaut fuer Positionen, Vita und spaetere Kampagnen-Inhalte.
-          </p>
-          <div className="hero-actions">
-            <a className="primary-action" href="#steckbrief">Profil ansehen</a>
-            <a className="ghost-action" href="#kontakt">Kontakt</a>
-          </div>
-        </div>
-
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
           <img src={heroImage} alt="" />
           <div className="quote-rotator" aria-label="Politische Aussagen">
