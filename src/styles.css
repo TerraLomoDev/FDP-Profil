@@ -223,13 +223,34 @@ h1 {
 
 .quote-rotator {
   position: absolute;
-  z-index: 4;
-  top: 50%;
-  left: 50%;
-  width: min(780px, calc(100% - 36px));
-  min-height: clamp(132px, 18vw, 190px);
-  overflow: hidden;
+  z-index: 5;
+  top: 30%;
+  left: 53%;
+  width: min(560px, calc(100% - 36px));
+  min-height: clamp(118px, 14vw, 166px);
+  border: 1px solid rgba(248, 247, 239, 0.2);
+  border-radius: 28px 28px 28px 10px;
+  background:
+    linear-gradient(135deg, rgba(248, 247, 239, 0.14), rgba(248, 247, 239, 0.04)),
+    rgba(8, 8, 8, 0.42);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
   transform: translate(-50%, -50%);
+}
+
+.quote-rotator::after {
+  position: absolute;
+  right: -44px;
+  bottom: 20px;
+  width: 72px;
+  height: 42px;
+  background: rgba(8, 8, 8, 0.42);
+  clip-path: polygon(0 12%, 100% 62%, 0 100%);
+  content: "";
+  filter: drop-shadow(18px 16px 26px rgba(0, 0, 0, 0.26));
+  transform: rotate(6deg);
 }
 
 .quote-rotator p {
@@ -239,12 +260,12 @@ h1 {
   align-items: center;
   justify-content: center;
   margin: 0;
-  color: rgba(248, 247, 239, 0.9);
-  font-size: clamp(1.35rem, 3.4vw, 3.7rem);
+  color: rgba(248, 247, 239, 0.94);
+  font-size: clamp(1.05rem, 2.2vw, 2.65rem);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.12;
   text-align: center;
-  text-shadow: 0 8px 34px rgba(0, 0, 0, 0.72), 0 0 2px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.78), 0 0 2px rgba(0, 0, 0, 0.92);
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(16px);
@@ -687,9 +708,9 @@ h1 {
   }
 
   .quote-rotator {
-    top: 50%;
+    top: 38%;
     left: 50%;
-    width: min(720px, calc(100% - 28px));
+    width: min(520px, calc(100% - 28px));
   }
 
   .game-stats {
@@ -738,12 +759,22 @@ h1 {
   .quote-rotator {
     width: calc(100% - 24px);
     min-height: clamp(178px, 34svh, 260px);
+    border-radius: 24px 24px 24px 10px;
+  }
+
+  .quote-rotator::after {
+    right: 28px;
+    bottom: -24px;
+    width: 48px;
+    height: 34px;
+    clip-path: polygon(0 0, 100% 0, 30% 100%);
+    transform: none;
   }
 
   .quote-rotator p {
     inset: 18px 12px;
-    font-size: clamp(1.42rem, 8.2vw, 2.45rem);
-    line-height: 1.08;
+    font-size: clamp(1.18rem, 7.4vw, 2.15rem);
+    line-height: 1.1;
     overflow-wrap: anywhere;
   }
 
