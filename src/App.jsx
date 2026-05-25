@@ -4,16 +4,16 @@ import fdpLogo from "./assets/fdp logo.jpg";
 const profileStats = [
   { label: "NAME", value: "Patrick van Rossum" },
   { label: "AGE", value: "32" },
-  { label: "FACTION", value: "FDP", logo: fdpLogo },
+  { label: "FACTION", value: "FDP", logo: fdpLogo, url: "https://www.fdp.de/" },
   { label: "REGION", value: "Hannover" },
   { label: "CLASS", value: "IT Business Analyst" },
   { label: "EDUCATION", value: "Fachinformatiker AE" },
 ];
 
 const affiliations = [
-  { name: "Junge Liberale", url: "https://www.julis.de/" },
-  { name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/" },
-  { name: "Chaos Computer Club", url: "https://www.ccc.de/" },
+  { name: "Junge Liberale", url: "https://www.julis.de/", suffix: "(Mitglied)" },
+  { name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/", suffix: "(Mitglied)" },
+  { name: "Chaos Computer Club", url: "https://www.ccc.de/", suffix: "(Mitglied)" },
   { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/", suffix: "(Mitglied)" },
 ];
 
@@ -107,7 +107,9 @@ function App() {
               <div className="stat-line" key={stat.label}>
                 <span>{stat.label}</span>
                 {stat.logo ? (
-                  <img className="party-logo" src={stat.logo} alt={stat.value} />
+                  <a className="party-logo-link" href={stat.url} target="_blank" rel="noreferrer">
+                    <img className="party-logo" src={stat.logo} alt={stat.value} />
+                  </a>
                 ) : (
                   <strong>{stat.value}</strong>
                 )}
