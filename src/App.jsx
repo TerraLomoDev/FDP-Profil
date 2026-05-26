@@ -1,5 +1,5 @@
 import heroVideo from "./assets/hero-video.mp4";
-import heroVideoPoster from "./assets/hero-video-poster.jpg";
+import heroVideoPoster from "./assets/fdp-profile-hero.png";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
 import youtubeLogo from "./assets/youtube.png";
