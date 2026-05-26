@@ -1,4 +1,3 @@
-import heroImage from "./assets/fdp-profile-hero.png";
 import heroVideo from "./assets/hero-video.mp4";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
@@ -101,9 +100,7 @@ const coreTopics = [
 
 function App() {
   return (
-    <>
-      <video className="page-video-backdrop" src={heroVideo} autoPlay muted loop playsInline aria-hidden="true" />
-      <main className="site-shell">
+    <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
         <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
           Patrick van Rossum (Quereinsteiger)
@@ -117,8 +114,7 @@ function App() {
 
       <section id="top" className="hero-section">
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
-          <video className="hero-backdrop" src={heroVideo} autoPlay muted loop playsInline aria-hidden="true" />
-          <video className="hero-media" src={heroVideo} autoPlay muted loop playsInline aria-hidden="true" />
+          <video className="hero-media" src={heroVideo} autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
           <div className="quote-rotator" aria-label="Politische Aussagen">
             {siteHeroQuotes.map((quote) => (
               <p key={quote}>{quote}</p>
@@ -228,8 +224,7 @@ function App() {
           <span>Kontakt: Patrick_van_rossum@julis.de</span>
         </div>
       </footer>
-      </main>
-    </>
+    </main>
   );
 }
 
