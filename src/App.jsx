@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import heroVideo from "./assets/hero-video.mp4";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
@@ -60,8 +61,12 @@ const siteHeroQuotes = [
 const coreTopics = [
   {
     title: "Buchholz-Kleefeld (Bezirksratswahlen)",
-    text:
-      "Kommunalpolitik muss konkret sein: sichere Wege, lebendige Stadtteile, digitale Verwaltung vor Ort und ein Bezirksrat, der Probleme löst, statt sie zu vertagen.",
+    paragraphs: [
+      "Unsere Kommunalpolitik muss endlich im 21. Jahrhundert ankommen. Durch meinen Beruf als IT Business Analyst habe ich gelernt, den aktuellen Ist-Zustand zu hinterfragen und neue Wege zu finden, wenn Prozesse nicht mehr funktionieren. Genau dieses Denken braucht es auch in der Politik. Dinge dürfen nicht weiter nur deshalb so gemacht werden, weil man sie schon immer so gemacht hat.",
+      "Überquellende Mülleimer, beschädigte Spielplätze, schlechte Beleuchtung oder Angsträume im öffentlichen Raum dürfen nicht erst nach Monaten bemerkt werden, sondern müssen schnell und unkompliziert gemeldet und behoben werden können.",
+      "Mit der EU Digital Identity Wallet, die ab Anfang 2027 allen Bürgerinnen und Bürgern zur Verfügung gestellt werden soll, entstehen dafür völlig neue Möglichkeiten. Vereinfacht gesagt: eine sichere digitale Identität auf dem Handy, mit der Menschen Behördengänge, Beteiligung und Meldungen einfach digital erledigen können. Warum sollte man damit nicht auch direkt Probleme im eigenen Stadtteil melden können?",
+      "Gleichzeitig bietet Künstliche Intelligenz neue Chancen für mehr Sicherheit in unseren Städten. Etwa an Orten, an denen sich Menschen abends unsicher fühlen, oder um Schulen besser vor dem aktuell zunehmenden Vandalismus zu schützen. Dabei gilt aber klar: Sicherheit darf niemals auf Kosten der Privatsphäre entstehen. Deshalb müssen solche Systeme anonymisiert arbeiten und Persönlichkeitsrechte konsequent geschützt werden. Gesichtserkennung im öffentlichen Raum, wie sie aktuell von der Landesregierung evaluiert wird, lehne ich dagegen klar ab.",
+    ],
     featured: true,
   },
   {
@@ -101,7 +106,20 @@ const coreTopics = [
   },
 ];
 
+const HERO_VIDEO_DELAY_MS = 2200;
+
 function App() {
+  const [shouldLoadHeroVideo, setShouldLoadHeroVideo] = useState(false);
+  const [heroVideoReady, setHeroVideoReady] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShouldLoadHeroVideo(true);
+    }, HERO_VIDEO_DELAY_MS);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
@@ -118,13 +136,14 @@ function App() {
       <section id="top" className="hero-section">
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
           <video
-            className="hero-media"
-            src={heroVideo}
+            className={`hero-media${heroVideoReady ? " is-loaded" : ""}`}
+            src={shouldLoadHeroVideo ? heroVideo : undefined}
             autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
+            preload={shouldLoadHeroVideo ? "metadata" : "none"}
+            onLoadedData={() => setHeroVideoReady(true)}
             aria-hidden="true"
           />
           <div className="quote-rotator" aria-label="Politische Aussagen">
