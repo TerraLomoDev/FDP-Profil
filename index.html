@@ -21,7 +21,7 @@
 
       <section id="top" class="hero-section">
         <div class="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
-          <video class="hero-media" data-src="./src/assets/hero-video.mp4" autoplay muted loop playsinline preload="none" aria-hidden="true"></video>
+          <video class="hero-media" src="./src/assets/hero-video.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
           <div class="quote-rotator" aria-label="Politische Aussagen">
             <p>Aufstieg darf keine Frage der Herkunft sein</p>
             <p>Integration gelingt nicht ohne Ordnung</p>
@@ -220,20 +220,5 @@
         </div>
       </footer>
     </main>
-    <script>
-      (() => {
-        const video = document.querySelector(".hero-media[data-src]");
-        if (!video) return;
-
-        window.setTimeout(() => {
-          video.addEventListener("loadeddata", () => video.classList.add("is-loaded"), { once: true });
-          video.src = video.dataset.src;
-          video.preload = "metadata";
-          video.load();
-          const playback = video.play();
-          if (playback) playback.catch(() => {});
-        }, 2200);
-      })();
-    </script>
   </body>
 </html>

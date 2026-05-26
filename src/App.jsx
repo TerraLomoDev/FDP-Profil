@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import heroVideo from "./assets/hero-video.mp4";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
@@ -106,20 +105,7 @@ const coreTopics = [
   },
 ];
 
-const HERO_VIDEO_DELAY_MS = 2200;
-
 function App() {
-  const [shouldLoadHeroVideo, setShouldLoadHeroVideo] = useState(false);
-  const [heroVideoReady, setHeroVideoReady] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setShouldLoadHeroVideo(true);
-    }, HERO_VIDEO_DELAY_MS);
-
-    return () => window.clearTimeout(timer);
-  }, []);
-
   return (
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
@@ -136,14 +122,13 @@ function App() {
       <section id="top" className="hero-section">
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
           <video
-            className={`hero-media${heroVideoReady ? " is-loaded" : ""}`}
-            src={shouldLoadHeroVideo ? heroVideo : undefined}
+            className="hero-media"
+            src={heroVideo}
             autoPlay
             muted
             loop
             playsInline
-            preload={shouldLoadHeroVideo ? "metadata" : "none"}
-            onLoadedData={() => setHeroVideoReady(true)}
+            preload="metadata"
             aria-hidden="true"
           />
           <div className="quote-rotator" aria-label="Politische Aussagen">
