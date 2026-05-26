@@ -1,5 +1,4 @@
 import heroVideo from "./assets/hero-video.mp4";
-import heroVideoPoster from "./assets/fdp-profile-hero.png";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
 import youtubeLogo from "./assets/youtube.png";
@@ -121,7 +120,6 @@ function App() {
           <video
             className="hero-media"
             src={heroVideo}
-            poster={heroVideoPoster}
             autoPlay
             muted
             loop
