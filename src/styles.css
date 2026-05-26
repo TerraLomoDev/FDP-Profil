@@ -262,59 +262,59 @@ h1 {
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(16px);
-  animation: quoteFade 50s infinite;
+  animation: quoteFade 60s infinite both;
 }
 
 .quote-rotator p:nth-child(2) {
-  animation-delay: 5s;
+  animation-delay: 6s;
 }
 
 .quote-rotator p:nth-child(3) {
-  animation-delay: 10s;
+  animation-delay: 12s;
 }
 
 .quote-rotator p:nth-child(4) {
-  animation-delay: 15s;
+  animation-delay: 18s;
 }
 
 .quote-rotator p:nth-child(5) {
-  animation-delay: 20s;
+  animation-delay: 24s;
 }
 
 .quote-rotator p:nth-child(6) {
-  animation-delay: 25s;
-}
-
-.quote-rotator p:nth-child(7) {
   animation-delay: 30s;
 }
 
+.quote-rotator p:nth-child(7) {
+  animation-delay: 36s;
+}
+
 .quote-rotator p:nth-child(8) {
-  animation-delay: 35s;
+  animation-delay: 42s;
 }
 
 .quote-rotator p:nth-child(9) {
-  animation-delay: 40s;
+  animation-delay: 48s;
 }
 
 .quote-rotator p:nth-child(10) {
-  animation-delay: 45s;
+  animation-delay: 54s;
 }
 
 @keyframes quoteFade {
   0%,
-  3% {
+  2% {
     opacity: 0;
     transform: translateY(16px);
   }
 
-  5%,
-  8% {
+  3%,
+  6% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  10%,
+  8%,
   100% {
     opacity: 0;
     transform: translateY(-14px);
