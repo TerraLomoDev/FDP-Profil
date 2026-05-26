@@ -1,4 +1,5 @@
 import heroImage from "./assets/fdp-profile-hero.png";
+import heroVideo from "./assets/hero-video.mp4";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
 import youtubeLogo from "./assets/youtube.png";
@@ -44,6 +45,19 @@ const heroQuotes = [
   "Deutschland braucht Macher statt Verwalter.",
 ];
 
+const siteHeroQuotes = [
+  "Wer hart arbeitet, muss aufsteigen können",
+  "Integration gelingt nicht ohne Ordnung",
+  "Mehr Geld im Portemonnaie. Weniger beim Staat.",
+  "Steuerbetrug zahlt am Ende die Mitte",
+  "Bildung entscheidet, ob Freiheit praktisch wird",
+  "Weniger Bürokratie. Mehr Vertrauen.",
+  "Liberaler Feminismus macht Menschen frei",
+  "Wirtschaftspolitik ist die beste Sozialpolitik",
+  "Deutschland braucht Macher statt Verwalter",
+  "Ohne gelebte Meinungsfreiheit stirbt Demokratie",
+];
+
 const coreTopics = [
   {
     title: "Buchholz-Kleefeld (Bezirksratswahlen)",
@@ -87,10 +101,12 @@ const coreTopics = [
 
 function App() {
   return (
-    <main className="site-shell">
+    <>
+      <video className="page-video-backdrop" src={heroVideo} autoPlay muted loop playsInline aria-hidden="true" />
+      <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
         <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
-          Patrick van Rossum
+          Patrick van Rossum (Quereinsteiger)
         </a>
         <div className="nav-links">
           <a href="#steckbrief">Profil</a>
@@ -101,10 +117,10 @@ function App() {
 
       <section id="top" className="hero-section">
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
-          <img className="hero-backdrop" src={heroImage} alt="" aria-hidden="true" />
-          <img className="hero-media" src={heroImage} alt="" />
+          <video className="hero-backdrop" src={heroVideo} autoPlay muted loop playsInline aria-hidden="true" />
+          <video className="hero-media" src={heroVideo} autoPlay muted loop playsInline aria-hidden="true" />
           <div className="quote-rotator" aria-label="Politische Aussagen">
-            {heroQuotes.map((quote) => (
+            {siteHeroQuotes.map((quote) => (
               <p key={quote}>{quote}</p>
             ))}
           </div>
@@ -212,7 +228,8 @@ function App() {
           <span>Kontakt: Patrick_van_rossum@julis.de</span>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
 
