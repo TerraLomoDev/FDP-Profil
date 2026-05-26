@@ -1,4 +1,5 @@
 import heroVideo from "./assets/hero-video.mp4";
+import heroVideoPoster from "./assets/hero-video-poster.jpg";
 import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
 import youtubeLogo from "./assets/youtube.png";
@@ -78,8 +79,11 @@ const coreTopics = [
   },
   {
     title: "Bildung",
-    text:
-      "Beste Chancen für jede Biografie: gute Ausstattung, starke Lehrkräfte und Schulen, die Talente wirklich fördern.",
+    paragraphs: [
+      "Das Aufstiegsversprechen unserer Gesellschaft muss wieder gelten. Herkunft entscheidet in Deutschland noch immer viel zu oft über Zukunft. Die Zahlen des Statistischen Bundesamts zeigen das deutlich: Menschen mit Migrationshintergrund haben ein mehr als doppelt so hohes Armutsrisiko wie Menschen ohne Migrationshintergrund. Bei Ausländerinnen und Ausländern liegt die Armutsgefährdung sogar noch deutlich höher.",
+      "Die Antwort darauf ist Bildung. Bildung ist der Schlüssel zu Aufstieg, Freiheit und echter Integration. Deshalb muss endlich auch das Kooperationsverbot im Bildungsbereich abgeschafft werden. Dieses Bürokratiemonster sorgt dafür, dass Bund und Länder sich bei Schulen gegenseitig die Verantwortung zuschieben, statt gemeinsam Probleme zu lösen. Während Klassenzimmer marode sind, Unterricht ausfällt und Chancen verloren gehen, diskutiert die Politik darüber, wer überhaupt zuständig ist. Das ist absurd.",
+      "Gerade in Niedersachsen brauchen wir verpflichtende Sprachstandards vor der Einschulung. Kinder, die diese Standards noch nicht erfüllen, müssen deshalb gezielt gefördert werden, bevor sie regulär die Schule besuchen. Wer dem Unterricht von Anfang an sprachlich nicht folgen kann, startet mit einem massiven Nachteil, der später nur schwer aufzuholen ist.",
+    ],
   },
   {
     title: "Liberaler Feminismus",
@@ -107,14 +111,24 @@ function App() {
         </a>
         <div className="nav-links">
           <a href="#steckbrief">Profil</a>
-          <a href="#fokus">Fokus</a>
+          <a href="#fokus">Schwerpunktthemen</a>
           <a href="#kontakt">Kontakt</a>
         </div>
       </nav>
 
       <section id="top" className="hero-section">
         <div className="hero-visual" aria-label="Abstraktes dunkles Profilmotiv">
-          <video className="hero-media" src={heroVideo} autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
+          <video
+            className="hero-media"
+            src={heroVideo}
+            poster={heroVideoPoster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          />
           <div className="quote-rotator" aria-label="Politische Aussagen">
             {siteHeroQuotes.map((quote) => (
               <p key={quote}>{quote}</p>
