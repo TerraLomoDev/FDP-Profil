@@ -69,6 +69,14 @@ const coreTopics = [
     featured: true,
   },
   {
+    title: "Bildung",
+    paragraphs: [
+      "Das Aufstiegsversprechen unserer Gesellschaft muss wieder gelten. Herkunft entscheidet in Deutschland noch immer viel zu oft über Zukunft. Die Zahlen des Statistischen Bundesamts zeigen das deutlich: Menschen mit Migrationshintergrund haben ein mehr als doppelt so hohes Armutsrisiko wie Menschen ohne Migrationshintergrund. Bei Ausländerinnen und Ausländern liegt die Armutsgefährdung sogar noch deutlich höher.",
+      "Die Antwort darauf ist Bildung. Bildung ist der Schlüssel zu Aufstieg, Freiheit und echter Integration. Deshalb muss endlich auch das Kooperationsverbot im Bildungsbereich abgeschafft werden. Dieses Bürokratiemonster sorgt dafür, dass Bund und Länder sich bei Schulen gegenseitig die Verantwortung zuschieben, statt gemeinsam Probleme zu lösen. Während Klassenzimmer marode sind, Unterricht ausfällt und Chancen verloren gehen, diskutiert die Politik darüber, wer überhaupt zuständig ist. Das ist absurd.",
+      "Gerade in Niedersachsen brauchen wir verpflichtende Sprachstandards vor der Einschulung. Kinder, die diese Standards noch nicht erfüllen, müssen deshalb gezielt gefördert werden, bevor sie regulär die Schule besuchen. Wer dem Unterricht von Anfang an sprachlich nicht folgen kann, startet mit einem massiven Nachteil, der später nur schwer aufzuholen ist.",
+    ],
+  },
+  {
     title: "Digitalisierung",
     paragraphs: [
       "Die Veränderungen, die uns insbesondere durch Künstliche Intelligenz in den nächsten fünf Jahren bevorstehen, werden größer sein als vieles, was wir in den vergangenen Jahrzehnten erlebt haben. Deshalb dürfen wir Digitalisierung nicht länger nur als technisches Thema begreifen. Digitalisierung ist Gesellschaftspolitik. Sie entscheidet darüber, wie wir lernen, arbeiten, wirtschaften und miteinander leben.",
@@ -84,14 +92,6 @@ const coreTopics = [
         label: "LOAD: Cyberbomben und der Umgang mit Hackbacks",
         url: "https://load-ev.de/2022/05/31/cyberbomben/",
       },
-    ],
-  },
-  {
-    title: "Bildung",
-    paragraphs: [
-      "Das Aufstiegsversprechen unserer Gesellschaft muss wieder gelten. Herkunft entscheidet in Deutschland noch immer viel zu oft über Zukunft. Die Zahlen des Statistischen Bundesamts zeigen das deutlich: Menschen mit Migrationshintergrund haben ein mehr als doppelt so hohes Armutsrisiko wie Menschen ohne Migrationshintergrund. Bei Ausländerinnen und Ausländern liegt die Armutsgefährdung sogar noch deutlich höher.",
-      "Die Antwort darauf ist Bildung. Bildung ist der Schlüssel zu Aufstieg, Freiheit und echter Integration. Deshalb muss endlich auch das Kooperationsverbot im Bildungsbereich abgeschafft werden. Dieses Bürokratiemonster sorgt dafür, dass Bund und Länder sich bei Schulen gegenseitig die Verantwortung zuschieben, statt gemeinsam Probleme zu lösen. Während Klassenzimmer marode sind, Unterricht ausfällt und Chancen verloren gehen, diskutiert die Politik darüber, wer überhaupt zuständig ist. Das ist absurd.",
-      "Gerade in Niedersachsen brauchen wir verpflichtende Sprachstandards vor der Einschulung. Kinder, die diese Standards noch nicht erfüllen, müssen deshalb gezielt gefördert werden, bevor sie regulär die Schule besuchen. Wer dem Unterricht von Anfang an sprachlich nicht folgen kann, startet mit einem massiven Nachteil, der später nur schwer aufzuholen ist.",
     ],
   },
   {
