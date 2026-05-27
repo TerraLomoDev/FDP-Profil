@@ -177,7 +177,7 @@ function App() {
               <div className="stat-line" key={stat.label}>
                 <span>{stat.label}</span>
                 {stat.logo ? (
-                  <a className="party-logo-link" href={stat.url} target="_blank" rel="noreferrer">
+                  <a className="party-logo-link" href={stat.url} target="_blank" rel="noopener noreferrer">
                     <img className="party-logo" src={stat.logo} alt={stat.value} />
                   </a>
                 ) : (
@@ -201,7 +201,7 @@ function App() {
               <ul>
                 {affiliations.map((affiliation) => (
                   <li key={affiliation.name}>
-                    <a href={affiliation.url} target="_blank" rel="noreferrer">
+                    <a href={affiliation.url} target="_blank" rel="noopener noreferrer">
                       {affiliation.name}
                     </a>
                     {affiliation.suffix ? ` ${affiliation.suffix}` : ""}
@@ -226,7 +226,7 @@ function App() {
                 ? topic.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
                 : <p>{topic.text}</p>}
               {(Array.isArray(topic.article) ? topic.article : topic.article ? [topic.article] : []).map((article) => (
-                <a className="topic-link" href={article.url} target="_blank" rel="noreferrer" key={article.url}>
+                <a className="topic-link" href={article.url} target="_blank" rel="noopener noreferrer" key={article.url}>
                   {article.label}
                 </a>
               ))}
@@ -243,7 +243,7 @@ function App() {
               className="social-link"
               href="https://www.instagram.com/patrick_vanrossum/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Instagram"
             >
               <img src={instagramLogo} alt="" />
