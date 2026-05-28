@@ -15,6 +15,7 @@ export default defineConfig({
         notFound: resolve(projectRoot, "404.html"),
         impressum: resolve(projectRoot, "impressum.html"),
         datenschutz: resolve(projectRoot, "datenschutz.html"),
+        ordoliberalismus: resolve(projectRoot, "ordoliberalismus.html"),
       },
     },
   },
