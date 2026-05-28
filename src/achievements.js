@@ -1,4 +1,4 @@
-const ACHIEVEMENT_INTERVAL_MS = 20 * 1000;
+const ACHIEVEMENT_INTERVAL_MS = 2 * 60 * 1000;
 
 const achievementMessages = [
   "Ein Amt hätte jetzt erst deinen Namen aufgerufen.",
@@ -34,7 +34,7 @@ const achievementMessages = [
 ];
 
 let lastMessageIndex = -1;
-let elapsedSeconds = 0;
+let elapsedMinutes = 0;
 let hideTimer;
 
 function pickMessage() {
@@ -72,8 +72,8 @@ function createAchievementToast() {
 }
 
 function showAchievement(elements) {
-  elapsedSeconds += ACHIEVEMENT_INTERVAL_MS / 1000;
-  elements.title.textContent = `${elapsedSeconds} Sekunden auf dieser Seite`;
+  elapsedMinutes += ACHIEVEMENT_INTERVAL_MS / 60 / 1000;
+  elements.title.textContent = `${elapsedMinutes} Minuten auf dieser Seite`;
   elements.message.textContent = pickMessage();
   elements.toast.classList.add("is-visible");
 
