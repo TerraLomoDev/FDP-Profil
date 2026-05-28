@@ -734,6 +734,62 @@ h1 {
   border-bottom-color: #ffed00;
 }
 
+.achievement-toast {
+  position: fixed;
+  right: clamp(14px, 3vw, 34px);
+  bottom: clamp(14px, 3vw, 34px);
+  z-index: 50;
+  width: min(390px, calc(100vw - 28px));
+  padding: 18px 20px 18px 22px;
+  border: 1px solid rgba(255, 237, 0, 0.34);
+  border-left: 5px solid #ffed00;
+  background:
+    linear-gradient(135deg, rgba(255, 237, 0, 0.13), rgba(230, 0, 126, 0.07)),
+    rgba(8, 8, 8, 0.92);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.44);
+  color: #f8f7ef;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.98);
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+}
+
+.achievement-toast.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.achievement-toast__kicker {
+  margin: 0 0 6px;
+  color: #ffed00;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.achievement-toast__title {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.achievement-toast__message {
+  margin: 8px 0 0;
+  color: rgba(248, 247, 239, 0.76);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-toast {
+    transition: none;
+  }
+}
+
 @media (max-width: 900px) {
   .topbar {
     position: absolute;
