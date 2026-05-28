@@ -53,7 +53,7 @@ a {
 }
 
 .topbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 20;
@@ -63,8 +63,12 @@ a {
   justify-content: space-between;
   gap: 22px;
   padding: 22px max(18px, calc((100vw - 1480px) / 2 + 42px));
-  background: linear-gradient(180deg, rgba(8, 8, 8, 0.88), rgba(8, 8, 8, 0));
-  backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.34), rgba(8, 8, 8, 0));
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.72);
+}
+
+.legal-shell .topbar {
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.86), rgba(8, 8, 8, 0));
 }
 
 .social-links {
