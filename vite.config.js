@@ -12,6 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(projectRoot, "index.html"),
+        notFound: resolve(projectRoot, "404.html"),
         impressum: resolve(projectRoot, "impressum.html"),
         datenschutz: resolve(projectRoot, "datenschutz.html"),
       },

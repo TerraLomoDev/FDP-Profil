@@ -643,6 +643,40 @@ h1 {
   border-bottom: 1px solid rgba(255, 237, 0, 0.34);
 }
 
+.not-found-shell {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255, 237, 0, 0.16), transparent 24rem),
+    radial-gradient(circle at 20% 88%, rgba(230, 0, 126, 0.13), transparent 22rem),
+    #080808;
+}
+
+.not-found-page {
+  display: grid;
+  min-height: 100svh;
+  align-content: center;
+  padding-top: clamp(120px, 16vw, 180px);
+}
+
+.not-found-page h1 {
+  max-width: 920px;
+  margin: 14px 0 0;
+  font-size: clamp(2.8rem, 8vw, 7rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.not-found-page p:not(.section-label) {
+  max-width: 620px;
+  margin-top: 24px;
+}
+
+.not-found-link {
+  width: fit-content;
+  margin-top: 36px;
+  margin-bottom: 0;
+}
+
 .legal-back {
   display: inline-flex;
   margin-bottom: 34px;
