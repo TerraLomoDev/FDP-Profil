@@ -108,7 +108,7 @@ const coreTopics = [
     },
   },
   {
-    title: "Migration und Flüchtlinge",
+    title: "Einwanderung",
     paragraphs: [
       "Die Debatte über Migration und Flüchtlingspolitik wird in Deutschland inzwischen von beiden Seiten extrem populistisch geführt. Immer wieder werden völlig unterschiedliche Themen bewusst oder unbewusst miteinander vermischt. Asylbewerber, Flüchtlinge, qualifizierte Einwanderung und Migration werden oft in einen Topf geworfen, obwohl dahinter unterschiedliche Herausforderungen stehen und deshalb auch unterschiedliche Lösungen notwendig sind. Die einen tun so, als gäbe es überhaupt keine Probleme. Die anderen tun so, als wäre Migration die Ursache aller Probleme unseres Landes. Beides hat mit der Realität wenig zu tun.",
       "Fakt ist Deutschland braucht Zuwanderung. Unsere Gesellschaft wird älter, der Fachkräftemangel wächst und der Mythos, man könne dieses Problem allein durch eine höhere Geburtenrate lösen, ist seit Jahren widerlegt. Selbst Länder mit deutlich stärkerer Familienförderung wie die skandinavischen Staaten stehen vor denselben demografischen Herausforderungen.",
@@ -119,9 +119,18 @@ const coreTopics = [
   },
   {
     title: "Wirtschaft",
-    text:
-      "Mehr Raum für Gründung, Mittelstand und Innovation, damit Leistung sich lohnt und Wachstum vor Ort entsteht.",
+    paragraphs: [
+      "Deutschland steckt seit Jahren in einer wirtschaftlichen Stagnation. Das Versprechen, dass es die nächste Generation einmal besser haben wird, ist längst kein Selbstläufer mehr. Wir gehören zu den Ländern mit der höchsten Steuer- und Abgabenlast weltweit, dennoch funktionieren vieles oft zu langsam, zu kompliziert und zu ineffizient. Um dies zu lösen müssen Politik und Gesellschaft gleichermaßen bereit sein, ihre Komfortzone zu verlassen.",
+      "Die enorme Schuldenaufnahme der aktuellen Bundesregierung, aber auch die reflexhafte Skandalisierung jeder Einsparung im Sozialbereich zeigen, wie schwer sich Deutschland mit echten Veränderungen tut. Die Agenda 2010, die letzte große Arbeitsmarktreform in Deutschland, hat gezeigt, dass notwendige Reformen häufig auf Widerstand stoßen, langfristig jedoch dazu beitragen, Wohlstand zu sichern und neue Chancen für kommende Generationen zu schaffen. Wirtschaftlicher Fortschritt entsteht nicht durch das Festhalten am Status quo. Er braucht Mut und die Bereitschaft, neue Wege zu gehen.",
+      "Um nur einige Beispiele zu nennen: Festhalten am Sonntagsverkaufsverbot, obwohl der Handel online und in unseren Nachbarländern längst weiterläuft, ist ein gutes Beispiel für veraltetes Denken. Während Geschäfte in Deutschland geschlossen bleiben, fließt Kaufkraft ins Ausland oder zu internationalen Onlineplattformen. Auch das Lieferkettengesetz der EU zeigt, wie häufig mit zusätzlicher Bürokratie auf Probleme reagiert wird, obwohl pragmatischere und innovationsfreundlichere Lösungen möglich wären.",
+      "Gleichzeitig muss der Staat konsequent gegenüber allen handeln, die sich nicht an die gemeinsamen Regeln halten. Das gilt sowohl für Menschen, die Sozialleistungen missbrauchen, als auch für diejenigen, die sich durch Steuerhinterziehung ihrer Verantwortung gegenüber der Gesellschaft entziehen. Eine funktionierende Soziale Marktwirtschaft basiert auf Vertrauen und Fairness. Wer Unterstützung benötigt, muss sie erhalten können. Wer jedoch bewusst Leistungen erschleicht oder sich seiner steuerlichen Verantwortung entzieht, schadet uns allen. Deshalb braucht es einen Staat, der Chancen ermöglicht und Leistung belohnt, gleichzeitig aber Regeln konsequent durchsetzt und Missbrauch wirksam bekämpft.",
+    ],
   },
+];
+
+const sortedTopics = [
+  ...coreTopics.filter((topic) => topic.featured),
+  ...coreTopics.filter((topic) => !topic.featured).sort((a, b) => a.title.localeCompare(b.title, "de")),
 ];
 
 function App() {
@@ -219,7 +228,7 @@ function App() {
           <h2>Nicht links. Nicht rechts. Sondern nach vorn.</h2>
         </div>
         <div className="topic-list">
-          {coreTopics.map((topic) => (
+          {sortedTopics.map((topic) => (
             <details className={topic.featured ? "topic-item topic-item-featured" : "topic-item"} key={topic.title}>
               <summary>{topic.title}</summary>
               {topic.paragraphs
