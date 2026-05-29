@@ -164,6 +164,12 @@ function App() {
               <p key={quote}>{quote}</p>
             ))}
           </div>
+          <blockquote className="hero-statement">
+            <span>Reformmut statt Stillstand</span>
+            <p>
+              Wir haben ein System geschaffen, das Fehler vermeiden will und dabei Fortschritt verhindert.
+            </p>
+          </blockquote>
         </div>
       </section>
 

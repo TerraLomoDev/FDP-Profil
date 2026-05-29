@@ -259,6 +259,36 @@ h1 {
   animation: quoteFade 60s infinite both;
 }
 
+.hero-statement {
+  position: absolute;
+  right: max(18px, calc((100vw - 1480px) / 2 + 56px));
+  bottom: clamp(72px, 10vh, 118px);
+  z-index: 4;
+  width: min(520px, calc(100% - 36px));
+  margin: 0;
+  padding: 0 0 0 clamp(16px, 2.4vw, 24px);
+  border-left: 3px solid #ffed00;
+  color: rgba(248, 247, 239, 0.92);
+  text-shadow: 0 10px 32px rgba(0, 0, 0, 0.78);
+}
+
+.hero-statement span {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffed00;
+  font-size: clamp(0.68rem, 1vw, 0.78rem);
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-statement p {
+  margin: 0;
+  font-size: clamp(1.02rem, 2vw, 1.42rem);
+  font-weight: 720;
+  line-height: 1.28;
+}
+
 .quote-rotator p:nth-child(2) {
   animation-delay: 6s;
 }
@@ -843,6 +873,12 @@ h1 {
     width: min(720px, calc(100% - 28px));
   }
 
+  .hero-statement {
+    right: 18px;
+    bottom: clamp(54px, 8vh, 82px);
+    width: min(520px, calc(100% - 36px));
+  }
+
   .game-stats {
     max-width: 760px;
   }
@@ -896,6 +932,15 @@ h1 {
     font-size: clamp(1.42rem, 8.2vw, 2.45rem);
     line-height: 1.08;
     overflow-wrap: anywhere;
+  }
+
+  .hero-statement {
+    bottom: 44px;
+    padding-left: 14px;
+  }
+
+  .hero-statement p {
+    font-size: 0.96rem;
   }
 
   .brand {
