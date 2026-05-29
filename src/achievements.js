@@ -1,4 +1,4 @@
-const ACHIEVEMENT_INTERVAL_MS = 2 * 60 * 1000;
+const ACHIEVEMENT_INTERVAL_MS = 10 * 60 * 1000;
 
 const achievementMessages = [
   "Ein Amt hätte jetzt erst deinen Namen aufgerufen.",

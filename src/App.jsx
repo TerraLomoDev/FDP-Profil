@@ -8,7 +8,7 @@ const profileStats = [
   { label: "AGE", value: "32" },
   { label: "FACTION", value: "FDP", logo: fdpLogo, url: "https://www.fdp.de/" },
   { label: "REGION", value: "Hannover" },
-  { label: "CLASS", value: "IT Business Analyst" },
+  { label: "JOB", value: "IT Business Analyst" },
   { label: "EDUCATION", value: "Fachinformatiker AE" },
 ];
 
