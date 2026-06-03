@@ -15,7 +15,6 @@ const profileStats = [
 const affiliations = [
   { name: "Junge Liberale", url: "https://www.julis.de/", suffix: "(Mitglied)" },
   { name: "Liberale Vielfalt", url: "https://www.liberalevielfalt.de/", suffix: "(Mitglied)" },
-  { name: "Chaos Computer Club", url: "https://www.ccc.de/", suffix: "(Mitglied)" },
   { name: "Box Club Hannover Kleefeld e. V.", url: "https://www.boxen-hannover.de/", suffix: "(Mitglied)" },
 ];
 
