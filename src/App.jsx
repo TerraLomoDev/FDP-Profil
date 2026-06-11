@@ -3,6 +3,8 @@ import fdpLogo from "./assets/fdp logo.jpg";
 import instagramLogo from "./assets/instagram.png";
 import youtubeLogo from "./assets/youtube.png";
 
+const youtubeUrl = "https://www.youtube.com/@TruePolitikTv";
+
 const profileStats = [
   { label: "NAME", value: "Patrick van Rossum" },
   { label: "AGE", value: "32" },
@@ -137,7 +139,18 @@ function App() {
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
         <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
-          Patrick van Rossum (TruePolitik)
+          Patrick van Rossum
+        </a>
+        <a
+          className="channel-link"
+          href={youtubeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TruePolitik auf YouTube"
+          title="TruePolitik auf YouTube"
+        >
+          <img src={youtubeLogo} alt="" />
+          <span>TruePolitik</span>
         </a>
         <div className="nav-links">
           <a href="#steckbrief">Profil</a>
@@ -262,9 +275,15 @@ function App() {
             >
               <img src={instagramLogo} alt="" />
             </a>
-            <span className="social-link social-link-static" aria-label="YouTube">
+            <a
+              className="social-link"
+              href={youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TruePolitik auf YouTube"
+            >
               <img src={youtubeLogo} alt="" />
-            </span>
+            </a>
           </div>
         </div>
         <div className="footer-links">
