@@ -137,7 +137,7 @@ function App() {
     <main className="site-shell">
       <nav className="topbar" aria-label="Hauptnavigation">
         <a className="brand" href="#top" aria-label="Patrick van Rossum Start">
-          Patrick van Rossum (Quereinsteiger)
+          Patrick van Rossum (TruePolitik)
         </a>
         <div className="nav-links">
           <a href="#steckbrief">Profil</a>
